@@ -1,0 +1,330 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color--primario: #1a1a1a;
+    --color--secundario: #ffff;
+    --color--terciario: #c0c6cc;
+    --color--cuarto: #0066ff;
+    --color--quinto: #2e2e2e;
+}
+
+header {
+    background: #000;
+}
+
+nav a {
+    color: #ffff;
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    width: 100%;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 20px;
+    position: relative;
+}
+
+img {
+    display: block;
+    flex-basis: 200px;
+    height: 90px;
+}
+
+/* <!-- BANNER SUPERIOR --> */
+.hero-contacto {
+    background: linear-gradient(90deg, #000 , #464646 , #0066ff);
+    padding: 15px;
+    font-family: "Roboto Mono", monospace;
+
+    .hero-contacto, h1, span {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    .p-uno {
+        color: #ffff;
+        letter-spacing: 10px;
+        margin-bottom: 8px;
+    }
+
+    h1 {
+        color: #ffff;
+        margin-top: 8px;
+    }
+
+    span {
+        color: #0066ff;
+    }
+
+    .p-dos {
+        color: #ffff;
+        margin-bottom: 8px;
+    }
+}
+
+/* <!-- Formulario + información --> */
+
+.contacto {
+    background: var(--color--quinto);
+    padding: 30px 20px;
+    font-family: "Roboto Mono", monospace;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;    /* formulario ancho, info angosta */
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* ---------- Formulario ---------- */
+.formulario {
+    background: #5f5f5f;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario h2 {
+    color: #ffff;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* nombre y teléfono lado a lado */
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    color: #ffff;
+    font-size: 0.85rem;
+}
+
+.telefono {
+    margin-left: 5px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    background: var(--color--quinto);
+    color: #ffff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px;
+    font-family: inherit;
+}
+
+.campo textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.formulario button {
+    align-self: center;
+    background: var(--color--cuarto);
+    color: #ffff;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 40px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* ---------- INFORMACIÓN + MAPA ---------- */
+.info-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.datos {
+    background: #555;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.datos p {
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.datos i {
+    color: var(--color--cuarto);
+    font-size: 1.4rem;
+}
+
+.datos a {
+    color: #ffff;
+}
+
+.mapa img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 800px) {
+    .contenedor,
+    .fila {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background: linear-gradient(120deg, #000 , #464646 , #0066ff);
+    color: #f8f8f8;
+    padding: 40px 30px 20px;
+    font-family: "Roboto Mono", monospace;
+}
+
+.footer-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.6fr 1.5fr 1fr 1fr;
+    gap: 30px;
+}
+
+/* Líneas divisorias entre columnas */
+.footer-col + .footer-col {
+    border-left: 2px solid #1a1a1a;
+    padding-left: 25px;
+}
+
+.footer-col h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.footer-col p,
+.footer-col li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.footer-col ul {
+    list-style: none;          /* quita las viñetas por defecto */
+}
+
+.footer-col a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: var(--color--cuartocuarto);
+}
+
+/* Columna del logo y redes */
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.libro img {
+    width: 80px;
+    height: auto;              /* anula el height: 90px global de img */
+    flex-basis: auto;
+    display: block;
+}
+
+.redes {
+    display: flex;
+    gap: 15px;
+}
+
+.redes a {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.redes a:hover {
+    color: var(--color--cuarto);
+    transform: translateY(-3px);
+}
+
+/* Copyright */
+.footer-copy {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #aaa;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* ---------- Tablet y celular ---------- */
+@media (max-width: 900px) {
+    .footer-contenedor {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-col + .footer-col {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-contenedor {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* ---------- Menú en celular ---------- */
+@media (max-width: 800px) {
+    .menu-nav {
+        flex-wrap: wrap;               /* permite que los enlaces bajen de línea */
+        justify-content: center;
+        gap: 10px 20px;
+        padding: 10px;
+    }
+
+    .logo {
+        flex-basis: 100%;              /* el logo ocupa su propia fila */
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        height: 70px;
+        width: auto;
+        flex-basis: auto;
+    }
+
+    nav a {
+        width: auto;                   /* quita el width: 100% en celular */
+        font-size: 0.85rem;
+    }
+}
