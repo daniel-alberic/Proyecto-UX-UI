@@ -1,0 +1,157 @@
+:root {
+    --colorprimario: #EC111A;
+    --colorsecundario: #082BA5;
+    --colorterciario: #007BDF;
+    --colortitulos: #282D31;
+    --colorparrafos: #53575A;
+    --colorsombras: #282D31;
+    --colorvar: #fff;
+    --colorBordes: #DFE0E0; 
+    --colorBlack: #000000;
+    /*Tipo De Letra*/
+    --FondoPrincipal: "Roboto Mono", monospace;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    box-shadow: 0px 0 3px var(--colorsombras);
+}
+
+.menu {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 7.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.menu__img-logo {
+    width: 170px;
+    height: 55px;
+    object-fit: fill;
+    max-width: none;
+    display: block;
+    margin-left: 0;
+}
+
+
+.menu__enlaces a {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em 1em;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none !important;
+    color: var(--colorBordes);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: 'Roboto Mono' , monospace;
+}
+/*Banner*/
+.mainbanner{
+    position: relative; 
+    padding: 24em 14em;
+    background: linear-gradient(to right, rgb(0, 183, 255),rgb(123, 255, 0));
+    top: 61px;
+}
+.mainbanner::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: var(--colorsecundario);
+    mix-blend-mode:color;
+    opacity: .2;
+}
+.mainbanner__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .2;
+}
+
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+    z-index: 20;
+    position: relative;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.centrado{
+    display: block;
+    margin: auto;
+}
+
+.mainbanner__data {
+    text-align: center;
+
+}
+
+.mainbanner__titulo{
+    color: #FFF;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 2.5em;
+    font-family: 'Roboto Mono' , monospace;
+}
+.mainbanner__parrafo{
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 1.2em;
+    font-family: 'Roboto Mono' , monospace;
+}
+.mainbanner__boton{
+    background-color: var(--colorprimario);
+    color: #fff;
+    padding: 1em 1.2em;
+    border-radius: 8em;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Poppins';
+    font-family: 'Roboto Mono' , monospace;
+}
+
+@media screen and (max-width: 640px){
+    .mainbanner{
+        padding: 8em 6em;
+    }
+    .mainbanner__boton{
+        display: block;
+        margin-bottom: 1em;
+    }
+    .mainbanner__data{
+        text-align: center;
+        margin: auto;
+    }
+    .mainbanner__titulo{
+        font-size: 2em;
+    }
+    .mainbanner__parrafo{
+        font-size: 1em;
+    }
+}
