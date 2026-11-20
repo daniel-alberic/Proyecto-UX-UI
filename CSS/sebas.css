@@ -1,0 +1,195 @@
+/* holaaa */
+:root {
+    --colorprimario: #EC111A;
+    --colorsecundario: #082BA5;
+    --colorterciario: #007BDF;
+    --colortitulos: #282D31;
+    --colorparrafos: #53575A;
+    --colorsombras: #282D31;
+    --colorvar: #fff;
+    --colorBordes: #DFE0E0;
+    --colorBlack: #000000;
+}
+
+/* SELECTOR UNIVERSAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--colorBlack);
+    color: var(--colorvar);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 110px; /* Espacio para que el header fijo no tape el título */
+}
+
+/* --- ENCABEZADO Y MENÚ --- */
+.encabezado {
+    background-color: var(--colorBlack);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    box-shadow: 0px 0px 3px var(--colorsombras);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: var(--colorvar);
+    text-decoration: none;
+    font-size: 1.05em;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--colorterciario);
+}
+
+/* --- SECCIÓN PRINCIPAL Y TÍTULOS --- */
+.principal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.titulo-seccion h1 {
+    color: var(--colorvar);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.8em;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.subtitulo-enlace {
+    color: var(--colorterciario);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.25em;
+    text-decoration: underline;
+    display: inline-block;
+    padding: 2px 6px;
+    transition: color 0.3s ease;
+}
+
+.subtitulo-enlace:hover {
+    color: var(--colorprimario);
+}
+
+/* --- CONTENIDO CENTRAL (LOGO K + INFO SEDE) --- */
+.contenido-sede {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.imagen-k img {
+    width: 340px;
+    height: auto;
+}
+
+.info-sede {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info-sede h2 {
+    color: var(--colorvar);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    align-self: center;
+}
+
+.dato-sede {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.dato-sede .icono {
+    width: 32px;
+    height: 32px;
+}
+
+.dato-sede p {
+    color: var(--colorvar);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+/* Botón azul "COMO LLEGAR" */
+.btn-llegar {
+    background-color: var(--colorterciario);
+    color: var(--colorvar);
+    text-decoration: none;
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 12px 25px;
+    margin-top: 15px;
+    align-self: center;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-llegar:hover {
+    background-color: var(--colorsecundario);
+}
+
+/* --- PIE DE PÁGINA (FOOTER) --- */
+.pie-pagina {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    margin-top: 40px;
+    border-top: 1px solid var(--colorsombras);
+}
+
+.logo-footer img {
+    width: 170px;
+    height: auto;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 50px;
+    margin-right: 60px;
+}
+
+.redes-sociales img {
+    width: 45px;
+    height: 45px;
+    transition: transform 0.2s ease;
+}
+
+.redes-sociales img:hover {
+    transform: scale(1.1);
+}
