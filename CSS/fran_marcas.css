@@ -1,1 +1,124 @@
-/* xD */
+:root {
+    --color--primario: #1a1a1a;
+    --color--secundario: #ffff;
+    --color--terciario: #c0c6cc;
+    --color--cuarto: #0066ff;
+    --color--quinto:#2e2e2e;
+}
+
+/*SELECTOR UNIVERSAL*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* INICIO DE CARD GRID */
+.cards__grid {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.card {
+    border-radius: 1em;
+    border: 0.5px solid var(--color--quinto);
+    box-shadow: 0 4px 6px var(--color--cuarto);
+}
+
+.card__img img {
+    max-width: 100%;
+    border-radius: 1em 1em 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.card__content {
+    padding: 1em;
+}
+
+.card__content a {
+    text-decoration: none;
+}
+
+.card__title {
+    font-family: "Roboto Mono";
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center;
+    color: var(--colortitulos);
+    text-transform: uppercase;
+}
+
+.card__info {
+    background-color: var(--color--cuarto);
+    color: black;
+    font-size: 1em;
+    padding: 1em;
+    margin-top: 1.5em;
+    display:flex;
+    border-radius: 1.5em;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Roboto Mono";
+    transition: background-color .5s ease-in-out;
+    background-color: var(--color--secundario);
+    border: 1px solid #0066ff;
+    color: #0066ff;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card__info:hover {
+    background-color: var(--color--cuarto);
+    color: var(--color--primario);
+}
+
+.IconoWS{
+    position: fixed;
+    left: 1em;
+    bottom: 1em;
+    font-size: 3em;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    padding: .3em;
+    box-shadow: 0px 0px 6px #000;
+}
+
+.titulo__centrar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: "Roboto Mono";
+    color: black;
+    margin-top: 3px;
+    font-size: 3em;
+}
+/* FIN DE CARD GRID */
+
+/* INICIO DE FOOTER */
+footer{
+    background-color: var(--colorsombras);
+    color: #fff;
+    padding: 1em 0;
+}
+.iconos-pie{
+    font-size: 3em;
+}
+.iconos-pie:hover{
+    color:var(--color--cuarto)
+}
+.pie, .info{
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 1em;
+}
+.derechos{
+    background-color: var(--color--cuarto);
+    color: #fff;
+    font-family: "poppins";
+    padding: 0.5em 0;
+    margin: 40px auto; 
+    box-sizing: border-box;
+}
