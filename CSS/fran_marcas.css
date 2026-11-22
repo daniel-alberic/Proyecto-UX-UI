@@ -3,7 +3,7 @@
     --color--secundario: #ffff;
     --color--terciario: #c0c6cc;
     --color--cuarto: #0066ff;
-    --color--quinto:#2e2e2e;
+    --color--quinto: #2e2e2e;
 }
 
 /*SELECTOR UNIVERSAL*/
@@ -12,7 +12,70 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* INICIO DE CARD GRID */
+
+header {
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 3px var(--colorsombras);
+}
+
+.menu {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__img-logo {
+    height: 60px;
+}
+
+.menu__btn-menu {
+    display: none;
+}
+
+.menu__enlaces a {
+    font-family: 'Roboto Mono', monospace;
+    padding: .7em;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    color: var(-);
+    font-weight: 1000;
+}
+
+@media screen and (max-width: 1023px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu__logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+
+    .menu__btn-menu {
+        display: block;
+        color: var(--colorprimario);
+        flex-direction: column;
+    }
+
+    .menu__enlaces {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
 .cards__grid {
     display: grid;
     gap: 1em;
@@ -21,17 +84,13 @@
 
 .card {
     border-radius: 1em;
-    border: 0.5px solid var(--color--quinto);
-    box-shadow: 0 4px 6px var(--color--cuarto);
+    border: 0.5px solid var(--colorsombras);
+    box-shadow: 0 4px 6px var(--colorsombras);
 }
 
 .card__img img {
     max-width: 100%;
     border-radius: 1em 1em 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
 }
 
 .card__content {
@@ -43,7 +102,7 @@
 }
 
 .card__title {
-    font-family: "Roboto Mono";
+    font-family: "poppins";
     font-weight: 700;
     font-size: 1em;
     text-align: center;
@@ -52,29 +111,29 @@
 }
 
 .card__info {
-    background-color: var(--color--cuarto);
-    color: black;
+    background-color: var(--colorprimario);
+    color: white;
     font-size: 1em;
     padding: 1em;
     margin-top: 1.5em;
-    display:flex;
+    display: block;
     border-radius: 1.5em;
     text-align: center;
     font-weight: 600;
-    font-family: "Roboto Mono";
+    font-family: "poppins";
     transition: background-color .5s ease-in-out;
-    background-color: var(--color--secundario);
-    border: 1px solid #0066ff;
-    color: #0066ff;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.card__info:hover {
-    background-color: var(--color--cuarto);
-    color: var(--color--primario);
+    background-color: #fff;
+    border: 1px solid red;
+    color: red;
+
 }
 
-.IconoWS{
+.card__info:hover {
+    background-color: var(--colorsecundario);
+    color: #ffff;
+}
+
+.IconoWS {
     position: fixed;
     left: 1em;
     bottom: 1em;
@@ -84,41 +143,4 @@
     border-radius: 50%;
     padding: .3em;
     box-shadow: 0px 0px 6px #000;
-}
-
-.titulo__centrar {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    font-family: "Roboto Mono";
-    color: black;
-    margin-top: 3px;
-    font-size: 3em;
-}
-/* FIN DE CARD GRID */
-
-/* INICIO DE FOOTER */
-footer{
-    background-color: var(--colorsombras);
-    color: #fff;
-    padding: 1em 0;
-}
-.iconos-pie{
-    font-size: 3em;
-}
-.iconos-pie:hover{
-    color:var(--color--cuarto)
-}
-.pie, .info{
-    font-family: "poppins";
-    font-weight: 400;
-    font-size: 1em;
-}
-.derechos{
-    background-color: var(--color--cuarto);
-    color: #fff;
-    font-family: "poppins";
-    padding: 0.5em 0;
-    margin: 40px auto; 
-    box-sizing: border-box;
 }
