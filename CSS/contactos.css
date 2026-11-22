@@ -12,6 +12,7 @@
     --color--quinto: #2e2e2e;
 }
 
+/* <!-- MENÚ DE NAVEGACIÓN --> */
 header {
     background: #000;
 }
@@ -316,7 +317,7 @@ img {
         display: flex;
         justify-content: center;
     }
-
+        
     .logo img {
         height: 70px;
         width: auto;
