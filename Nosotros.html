@@ -1,57 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carros</title>
-     <!-- FAVICON Y/O LOGOTIPO DE LA PAGINA -->
+    <title>Nosotros - Kovara Automotriz</title>
+    <!-- FAVICON Y/O LOGOTIPO DE LA PAGINA -->
     <link rel="shortcut icon" href="image/5ad0a79e-2d1d-4cd3-8555-0854dd81e5c1.jpg" type="image/x-icon">
 
     <!-- LIBRERIA DE FUENTES -->
-    <link 
-    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" 
-    rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
 
     <!-- FRAMEWORK DE BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <!-- BOOTSTRAP ICONS (para bi-instagram y bi-whatsapp) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <!-- LIBRERIA DE ICONOS -->
     <script src="https://kit.fontawesome.com/812c8ee19a.js" crossorigin="anonymous"></script>
 
-    <!-- HOJA DE ESTILOS-->
+    <!-- HOJA DE ESTILOS -->
     <link rel="stylesheet" href="CSS/nosotros.css">
 </head>
 <body>
-     <header id="header">
-    <nav class="menu">
-        <a href="#" class="menu__enlace-logo">
-            <img src="image/5ad0a79e-2d1d-4cd3-8555-0854dd81e5c1.jpg" alt="Logo Kovara Automotriz" class="menu__img-logo">
-        </a>
-        <div class="menu__enlaces" id="enlaces">
-            <a href="Inicio.html">Inicio</a> 
-            <a href="#">Contactos</a>
-            <a href="#">Marcas</a>
-            <a href="#">Registro</a>
-            <a href="Nosotros.html">Nosotros</a>
-            <a href="#">Accesorios</a>
-            <a href="#">Sedes</a>
-        </div>
-    </nav>
-</header>
- <div class="mainbanner">
+    <header id="header">
+        <nav class="menu">
+            <a href="#" class="menu__enlace-logo">
+                <img src="image/5ad0a79e-2d1d-4cd3-8555-0854dd81e5c1.jpg" alt="Logo Kovara Automotriz" class="menu__img-logo">
+            </a>
+            <div class="menu__enlaces" id="enlaces">
+                <a href="Inicio.html">Inicio</a>
+                <a href="contactos.html">Contactos</a>
+                <a href="fran_marcas.html">Marcas</a>
+                <a href="1egg.html">Registro</a>
+                <a href="Nosotros.html">Nosotros</a>
+                <a href="accesorios.html">Accesorios</a>
+                <a href="sebas.html">Sedes</a>
+            </div>
+        </nav>
+    </header>
 
+    <div class="mainbanner">
         <div class="container">
-
             <div class="row centrado">
-
                 <div class="mainbanner__data">
-
                     <h1 class="mainbanner__titulo">Más que autos, construimos confianza en cada kilómetro</h1>
 
                     <p class="mainbanner__parrafo">
                         En Kovara Automotriz nos dedicamos a conectar a las personas con el vehículo ideal para su estilo de vida, trabajo y proyectos. Nacimos con la visión de transformar la experiencia tradicional de adquirir y equipar un automóvil, apostando por un servicio transparente, moderno y centrado realmente en las necesidades de cada conductor.
                         A lo largo de nuestro crecimiento, hemos consolidado un catálogo seleccionado de marcas reconocidas y una línea especializada de accesorios automotrices diseñados para potenciar el rendimiento, la seguridad y la estética de cada unidad. Nuestro equipo técnico y comercial trabaja bajo estándares rigurosos de inspección y asesoría personalizada, asegurando que cada cliente tome una decisión informada, segura y respaldada en cualquiera de nuestras sedes.
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-col footer-marca">
+                <a href="#" class="libro">
+                    <img src="image/boock.png" alt="Libro de Reclamaciones">
+                </a>
+                <div class="redes">
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Kovara Automotriz</h3>
+                <p>
+                    Kovara Automotriz motores es un importador y distribuidor de autos
+                    ecológicos, sedán, hatchback, camionetas SUV, camiones y buses de
+                    Hyundai en el Perú.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Estamos ubicados en</h3>
+                <p>Av. Panamericana Norte, Mega Plaza Independencia</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Post venta</h3>
+                <ul>
+                    <li><a href="#">Servicio PostVenta</a></li>
+                    <li><a href="#">Zona educativa</a></li>
+                    <li><a href="#">Hyundai Seguros</a></li>
+                    <li><a href="#">Hyundai Garantía</a></li>
+                    <li><a href="#">Kit Control</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer-copy">
+            © 2026 Kovara Automotriz, Perú., Inc. All information applies to U.S. vehicles only.
+        </p>
+    </footer>
 </body>
 </html>
