@@ -1,100 +1,120 @@
-:root {
-    --color--primario: #1a1a1a;
-    --color--secundario: #ffff;
-    --color--terciario: #c0c6cc;
-    --color--cuarto: #0066ff;
-    --color--quinto: #2e2e2e;
-}
-
-/*SELECTOR UNIVERSAL*/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-header {
-    background-color: rgb(0, 0, 0);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 0 3px var(--colorsombras);
+:root {
+    --color--primario: #1a1a1a;
+    --color--secundario: #ffff;
+    --color--terciario: #c0c6cc;
+    --color--cuarto: #0066ff;
+    --color--quinto: #2e2e2e;
+    --colorsombras: rgba(0, 0, 0, 0.15);
+    --colortitulos: #1a1a1a;
 }
 
-.menu {
+body {
+    background-color: #000000;
+}
+
+/* MENÚ ORIGINAL DEL PROYECTO GRUPAL */
+header {
+    background: #000;
+}
+
+nav a {
+    color: #ffff;
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
     width: 100%;
-    margin: auto;
+}
+
+.menu-nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    gap: 30px;
+    padding: 10px 20px;
+    position: relative;
 }
 
-.menu__img-logo {
-    height: 60px;
+img {
+    display: block;
+    flex-basis: 200px;
+    height: 90px;
 }
 
-.menu__btn-menu {
-    display: none;
-}
-
-.menu__enlaces a {
-    font-family: 'Roboto Mono', monospace;
-    padding: .7em;
+/* 3 ARRIBA Y 3 ABAJO */
+.titulo-marcas {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+    font-size: 2rem;
     text-align: center;
-    font-size: 1em;
-    text-decoration: none;
-    color: var(-);
-    font-weight: 1000;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
 }
-
-@media screen and (max-width: 1023px) {
-    .menu {
-        flex-direction: column;
-    }
-
-    .menu__logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        padding: 1em;
-    }
-
-    .menu__btn-menu {
-        display: block;
-        color: var(--colorprimario);
-        flex-direction: column;
-    }
-
-    .menu__enlaces {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-
 .cards__grid {
     display: grid;
-    gap: 1em;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
 .card {
     border-radius: 1em;
     border: 0.5px solid var(--colorsombras);
     box-shadow: 0 4px 6px var(--colorsombras);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.card__img {
+    width: 100%;
+    max-width: 260px;
+    height: 185px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #007bff;
+    border-radius: 24px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__img a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* IMAGEN ENCIMA DEL CONTENEDOR REDONDEADO */
 .card__img img {
+    display: block;
+    width: auto;
+    height: auto;
     max-width: 100%;
-    border-radius: 1em 1em 0 0;
+    max-height: 100%;
+    flex-basis: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
 }
 
 .card__content {
-    padding: 1em;
+    padding: 1em 0 0;
+    width: 100%;
 }
 
 .card__content a {
@@ -102,7 +122,7 @@ header {
 }
 
 .card__title {
-    font-family: "poppins";
+    font-family: "Roboto Mono", monospace;
     font-weight: 700;
     font-size: 1em;
     text-align: center;
@@ -111,8 +131,6 @@ header {
 }
 
 .card__info {
-    background-color: var(--colorprimario);
-    color: white;
     font-size: 1em;
     padding: 1em;
     margin-top: 1.5em;
@@ -120,16 +138,15 @@ header {
     border-radius: 1.5em;
     text-align: center;
     font-weight: 600;
-    font-family: "poppins";
-    transition: background-color .5s ease-in-out;
+    font-family: "Roboto Mono", monospace;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
     background-color: #fff;
-    border: 1px solid red;
-    color: red;
-
+    border: 1px solid #0066ff;
+    color: #0066ff;
 }
 
 .card__info:hover {
-    background-color: var(--colorsecundario);
+    background-color: #0066ff;
     color: #ffff;
 }
 
@@ -143,4 +160,108 @@ header {
     border-radius: 50%;
     padding: .3em;
     box-shadow: 0px 0px 6px #000;
+}
+
+/* Adaptable en pantallas medianas y celulares */
+@media (max-width: 900px) {
+    .cards__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background: linear-gradient(120deg, #000, #464646, #0066ff);
+    color: #f8f8f8;
+    padding: 40px 30px 20px;
+    font-family: "Roboto Mono", monospace;
+}
+
+.footer-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.6fr 1.5fr 1fr 1fr;
+    gap: 30px;
+}
+
+/* Líneas divisorias entre columnas */
+.footer-col+.footer-col {
+    border-left: 2px solid #1a1a1a;
+    padding-left: 25px;
+}
+
+.footer-col h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.footer-col p,
+.footer-col li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.footer-col ul {
+    list-style: none;
+    /* quita las viñetas por defecto */
+}
+
+.footer-col a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: var(--color--cuartocuarto);
+}
+
+/* Columna del logo y redes */
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.libro img {
+    width: 80px;
+    height: auto;
+    /* anula el height: 90px global de img */
+    flex-basis: auto;
+    display: block;
+}
+
+.redes {
+    display: flex;
+    gap: 15px;
+}
+
+.redes a {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.redes a:hover {
+    color: var(--color--cuarto);
+    transform: translateY(-3px);
+}
+
+/* Copyright */
+.footer-copy {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #aaa;
+    text-align: center;
+    font-size: 0.8rem;
 }
