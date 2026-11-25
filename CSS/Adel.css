@@ -98,12 +98,28 @@ Columna Derecha: Formulario
 ========================================= */
 .contact-form {
 width: 70%;
-padding: 50px 40px;
+padding: 40px 30px;
 background-color: var(--colorSecundario);
 position: relative;
 overflow: hidden;
 color: var(--ColorAdd);
 border: 4px solid var(--ColorAdd);
+font-family: var(--FuentPrincipal);
+}
+input[type=checkbox]{
+    transform: scale(1.5);
+}
+.requiem {
+display: block;
+margin-top: 1rem;
+font-size: 20px;
+}
+
+.contact-form button{
+    display: flex;
+
+    margin: 10px 9em;
+
 }
 h2{
     text-align: center;
