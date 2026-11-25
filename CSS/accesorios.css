@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color--primario: #1a1a1a;
+    --color--secundario: #ffff;
+    --color--terciario: #c0c6cc;
+    --color--cuarto: #0066ff;
+    --color--quinto: #2e2e2e;
+}
+
+header {
+    background: #000;
+}
+
+nav a {
+    color: #ffff;
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+    width: 100%;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 20px;
+    position: relative;
+}
+
+img {
+    display: block;
+    flex-basis: 200px;
+    height: 90px;
+}
+
+/* <!-- BANNER SUPERIOR --> */
+.hero-contacto {
+    background: linear-gradient(90deg, #000 , #464646 , #0066ff);
+    padding: 15px;
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+
+    .hero-contacto, h1, span {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+
+    }
+
+    .p-uno {
+        color: #ffff;
+        letter-spacing: 10px;
+        margin-bottom: 8px;
+    }
+
+    h1 {
+        color: #ffff;
+        margin-top: 8px;
+    }
+
+    span {
+        color: #0066ff;
+    }
+
+    .p-dos {
+        color: #ffff;
+        margin-bottom: 8px;
+    }
+}
+
