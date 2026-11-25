@@ -26,42 +26,45 @@
     <script src="js/WE_MC_03_jquery.js"></script>
 </head>
 <body>
-    <header class="encabezado_menu">
-        <div class="logo_menu">
-            <img src="image/kovara.jpg" alt="Logo Kovara Automotriz">
-        </div>
-        <nav class="menu">
-          <ul>
-            <li><a href="Inicio.html">INICIO</a></li>
-            <li><a href="contactos.html">CONTACTOS</a></li>
-            <li><a href="fran_marcas.html">MARCAS</a></li>
-            <li><a href="Nosotros.html">NOSOTROS</a></li>
-            <li><a href="accesorios.html">ACCESORIOS</a></li>
-          </ul>
-        </nav>
-    </header>
+  <header class="encabezado_menu">
+    <div class="logo_menu">
+      <img src="image/kovara.jpg" alt="Logo Kovara Automotriz">
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="Inicio.html">INICIO</a></li>
+        <li><a href="contactos.html">CONTACTOS</a></li>
+        <li><a href="fran_marcas.html">MARCAS</a></li>
+        <li><a href="Nosotros.html">NOSOTROS</a></li>
+        <li><a href="accesorios.html">ACCESORIOS</a></li>
+        <li><a href="Adel.html">REGISTRO</a></li>        
+      </ul>
+    </nav>
+  </header>
 <div class="contact-container">
 <!-- Columna Izquierda: Información -->
 <div class="Col-left">
     <a href="#">
-        <img src="image/kovara1.jpg" class="img-fluid">
+      <img src="image/kovara1.jpg" class="img-fluid">
     </a><br><br><br><br><br>
     <p class="Text-card-left">
-        ¿Ya tienes cuenta?<br>Entonces comunicate con <a href="" class="actilin">nosotros</a></p>
+      ¿Ya tienes cuenta?<br>Entonces comunicate con <a href="" class="actilin">nosotros</a></p>
 </div>
 <!-- Columna Derecha: Formulario -->
 <div class="contact-form">
   <h2 class="form-title">Registrate</h2><br>
-    <p class="flex-column">Nombre</p>    
-      <input type="text">
-    <p class="a2">Apellido</p>
-      <input type="text"> 
-    <p class="flex-column">Email</p>
-      <input type="email">
-    <p>Contraseña</p>
-      <input type="password">    
+    <label for="Nombre" class="requiem">Nombre:</label>
+      <input type="text" size="30">
+    <label for="Apellido" class="requiem">Apellido:</label>
+      <input type="text" size="30"> 
+    <label for="Email" class="requiem">Email:</label>
+      <input type="email" size="30">
+    <label for="Contraseña" class="requiem">Contraseña:</label>
+      <input type="password" size="30">    
     <br><br>
-    <input type="checkbox"><p>lee los terminos y condiciones</p>
+    <input type="checkbox" id="coding" name="interest" value="coding" checked />
+      <label for="coding">Lee los terminos y condiciones</label>
+    <button>Enviar</button>
 </div>
 </div>
 <!-- FOOTER -->
