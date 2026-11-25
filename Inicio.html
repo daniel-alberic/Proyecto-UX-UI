@@ -1,66 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carros</title>
-     <!-- FAVICON Y/O LOGOTIPO DE LA PAGINA -->
+    <!-- FAVICON Y/O LOGOTIPO DE LA PAGINA -->
     <link rel="shortcut icon" href="image/5ad0a79e-2d1d-4cd3-8555-0854dd81e5c1.jpg" type="image/x-icon">
 
     <!-- LIBRERIA DE FUENTES -->
-    <link 
-    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" 
-    rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
 
     <!-- FRAMEWORK DE BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <!-- BOOTSTRAP ICONS (para bi-instagram y bi-whatsapp) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <!-- LIBRERIA DE ICONOS -->
     <script src="https://kit.fontawesome.com/812c8ee19a.js" crossorigin="anonymous"></script>
 
-    <!-- HOJA DE ESTILOS-->
+    <!-- HOJA DE ESTILOS -->
     <link rel="stylesheet" href="CSS/inicio.css">
 </head>
 <body>
-     <header id="header">
-    <nav class="menu">
-        <a href="#" class="menu__enlace-logo">
-            <img src="image/5ad0a79e-2d1d-4cd3-8555-0854dd81e5c1.jpg" alt="Logo Kovara Automotriz" class="menu__img-logo">
-        </a>
-        <div class="menu__enlaces" id="enlaces">
-            <a href="Inicio.html">Inicio</a>
-            <a href="#">Contactos</a>
-            <a href="#">Marcas</a>
-            <a href="#">Registro</a>
-            <a href="Nosotros.html">Nosotros</a>
-            <a href="#">Accesorios</a>
-            <a href="#">Sedes</a>
-        </div>
-    </nav>
-</header>
- <div class="mainbanner">
+    <header id="header">
+        <nav class="menu">
+            <a href="#" class="menu__enlace-logo">
+                <img src="image/kovara.jpg" alt="Logo Kovara Automotriz" class="menu__img-logo">
+            </a>
+            <div class="menu__enlaces" id="enlaces">
+                <a href="Inicio.html">Inicio</a>
+                <a href="contactos.html">Contactos</a>
+                <a href="fran_marcas.html">Marcas</a>
+                <a href="1egg.html">Registro</a>
+                <a href="Nosotros.html">Nosotros</a>
+                <a href="accesorios.html">Accesorios</a>
+                <a href="sebas.html">Sedes</a>
+            </div>
+        </nav>
+    </header>
 
-        <img src="img/banner-5.jpg" alt="" class="mainbanner__img">
+    <div class="mainbanner">
+        <img src="image/sliver-metallic-color-sport-car-driving-with-high-speed-road.jpg" alt="" class="mainbanner__img">
 
         <div class="container">
-
             <div class="row centrado">
-
                 <div class="mainbanner__data">
-
                     <h1 class="mainbanner__titulo">Bienvenido a Kovara Automotriz</h1>
-
                     <p class="mainbanner__parrafo">
                         Descubre nuestra selección de vehículos de las mejores marcas y<br> equipa tu auto con accesorios de alto rendimiento.
                     </p>
-
-
-                    <a href="#" class="mainbanner__boton">Ver Marcas</a>
-                    <a href="Diplomados.html" class="mainbanner__boton">Ver Accesorios</a>
+                    <a href="fran_marcas.html" class="mainbanner__boton">Ver Marcas</a>
+                    <a href="accesorios.html" class="mainbanner__boton">Ver Accesorios</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <main class="container">
+        <br><br><br><br>
+        <h1 class="cards__titulo">Catálogo</h1>
+
+        <!-- MAIN CARDS -->
+        <div class="cards__grid">
+            <!-- 1 -->
+            <div class="card">
+                <div class="card__img">
+                    <a href="#"><img src="image/VW_tera01.png" alt=""></a>
+                </div>
+                <div class="card__content">
+                    <a href="#"><h3 class="card__title">Volkswagen<br>Tera</h3></a>
+                    <a href="#" class="card__info to-center">Conocer más</a>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="card">
+                <div class="card__img">
+                    <a href="#"><img src="image/2026-honda-accord-sport-hybrid-in-solar-silver-metallic-xl.avif" alt=""></a>
+                </div>
+                <div class="card__content">
+                    <a href="#"><h3 class="card__title">SEDAN 2026 Accord Hybrid<br>46/41 CITY/HWY MPG RTG</h3></a>
+                    <a href="#" class="card__info to-center">Conocer más</a>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="card">
+                <div class="card__img">
+                    <a href="#"><img src="image/CHR_MY26_0033_V001_D.avif" alt=""></a>
+                </div>
+                <div class="card__content">
+                    <a href="#"><h3 class="card__title">2027 C-HR<br>Convierte cada trayecto en un viaje inspirador</h3></a>
+                    <a href="#" class="card__info to-center">Conocer más</a>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="card">
+                <div class="card__img">
+                    <a href="#"><img src="image/disen_o-exterior.png" alt=""></a>
+                </div>
+                <div class="card__content">
+                    <a href="#"><h3 class="card__title">NEW JIMNY 5D<br>GL 1.5 MT 4X4</h3></a>
+                    <a href="#" class="card__info to-center">Conocer más</a>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="card">
+                <div class="card__img">
+                    <a href="#"><img src="image/vehicle.avif" alt=""></a>
+                </div>
+                <div class="card__content">
+                    <a href="#"><h3 class="card__title">EcoBoost®<br>Premium Fastback</h3></a>
+                    <a href="#" class="card__info to-center">Conocer más</a>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="card">
+                <div class="card__img">
+                    <a href="#"><img src="image/new-santa-fe-miniatura-cotizador-469x260-2.w.png" alt=""></a>
+                </div>
+                <div class="card__content">
+                    <a href="#"><h3 class="card__title">All New<br>SANTA FE</h3></a>
+                    <a href="#" class="card__info to-center">Conocer más</a>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Del Card / .cards__grid -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-col footer-marca">
+                <a href="#" class="libro">
+                    <img src="image/boock.png" alt="Libro de Reclamaciones">
+                </a>
+                <div class="redes">
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Kovara Automotriz</h3>
+                <p>
+                    Kovara Automotriz motores es un importador y distribuidor de autos
+                    ecológicos, sedán, hatchback, camionetas SUV, camiones y buses de
+                    Hyundai en el Perú.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Estamos ubicados en</h3>
+                <p>Av. Panamericana Norte, Mega Plaza Independencia</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Post venta</h3>
+                <ul>
+                    <li><a href="#">Servicio PostVenta</a></li>
+                    <li><a href="#">Zona educativa</a></li>
+                    <li><a href="#">Hyundai Seguros</a></li>
+                    <li><a href="#">Hyundai Garantía</a></li>
+                    <li><a href="#">Kit Control</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer-copy">
+            © 2026 Kovara Automotriz, Perú., Inc. All information applies to U.S. vehicles only.
+        </p>
+    </footer>
 </body>
 </html>
