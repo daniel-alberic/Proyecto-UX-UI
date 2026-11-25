@@ -1,0 +1,426 @@
+:root {
+    --colorprimario: #EC111A;
+    --colorsecundario: #082BA5;
+    --colorterciario: #007BDF;
+    --colortitulos: #282D31;
+    --colorparrafos: #53575A;
+    --colorsombras: #282D31;
+    --colorvar: #fff;
+    --colorBordes: #DFE0E0; 
+    --colorBlack: #000000;
+    /*Tipo De Letra*/
+    --FondoPrincipal: "Roboto Mono", monospace;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/image/sliver-metallic-color-sport-car-driving-with-high-speed-road.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    box-shadow: 0px 0 3px var(--colorsombras);
+}
+
+.menu {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 7.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.menu__img-logo {
+    width: 170px;
+    height: 55px;
+    object-fit: fill;
+    max-width: none;
+    display: block;
+    margin-left: 0;
+}
+
+
+.menu__enlaces a {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em 1em;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none !important;
+    color: var(--colorBordes);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: 'Roboto Mono' , monospace;
+}
+/*Banner*/
+.mainbanner{
+    position: relative; 
+    padding: 24em 14em;
+    background: linear-gradient(to right, rgb(42, 60, 165),rgba(0, 0, 0, 0));
+    top: 61px;
+}
+.mainbanner::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: var(--colorsecundario);
+    mix-blend-mode:color;
+    opacity: .2;
+}
+
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+    z-index: 20;
+    position: relative;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.centrado{
+    display: block;
+    margin: auto;
+}
+
+.mainbanner__data {
+   text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    transform: translateY(-150px);
+}
+
+.mainbanner__titulo{
+    color: #ffffff;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Roboto Mono' , monospace;
+}
+.mainbanner__parrafo{
+    color: #ffffff;
+    font-family: 'Poppins';
+    font-size: 1.2em;
+    font-family: 'Roboto Mono' , monospace;
+}
+
+@media screen and (max-width: 640px){
+    .mainbanner{
+        padding: 8em 6em;
+    }
+    .mainbanner__data{
+        text-align: center;
+        margin: auto;
+    }
+    .mainbanner__titulo{
+        font-size: 2em;
+    }
+    .mainbanner__parrafo{
+        font-size: 1em;
+    }
+}
+/* ---------- FOOTER ---------- */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-sizing: border-box;
+    background: linear-gradient(120deg, #000, #464646, #0066ff);
+    color: #f8f8f8;
+    padding: 18px 30px 12px;
+    font-family: "Roboto Mono", monospace;
+}
+
+.footer-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.6fr 1.5fr 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.footer-col {
+    min-width: 0;
+}
+
+/* Líneas divisorias entre columnas */
+.footer-col + .footer-col {
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    padding-left: 20px;
+}
+
+.footer-col h3 {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.footer-col p,
+.footer-col li {
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: var(--color--cuartocuarto, #9ec5ff);
+}
+
+/* Columna del logo y redes */
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.libro img {
+    width: 55px;
+    height: auto;
+    flex-basis: auto;
+    display: block;
+}
+
+.redes {
+    display: flex;
+    gap: 12px;
+}
+
+.redes a {
+    color: #f8f8f8;
+    font-size: 1.35rem;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.redes a:hover {
+    color: var(--color--cuarto, #66a3ff);
+    transform: translateY(-2px);
+}
+
+/* Copyright */
+.footer-copy {
+    max-width: 1100px;
+    margin: 10px auto 0;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+    font-size: 0.72rem;
+}
+
+/* Espacio extra abajo del banner para que no lo tape el footer fijo */
+.mainbanner {
+    padding-bottom: 220px;
+}
+/* ---------- Tablet ---------- */
+@media (max-width: 900px) {
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .menu {
+        height: auto;
+        min-height: 70px;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+    }
+
+    .menu__img-logo {
+        width: 135px;
+        height: 44px;
+    }
+
+    .menu__enlaces {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px 6px;
+    }
+
+    .menu__enlaces a {
+        padding: 0.35em 0.65em;
+        font-size: 0.85rem;
+    }
+
+    .mainbanner {
+        padding: 150px 24px 180px;
+        margin-top: 0;
+    }
+
+    .footer {
+        padding: 14px 20px 10px;
+        max-height: 45vh;
+        overflow-y: auto;
+    }
+
+    .footer-contenedor {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 20px;
+        align-items: start;
+    }
+
+    .footer-col + .footer-col {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .footer-col h3 { font-size: 0.85rem; margin-bottom: 4px; }
+    .footer-col p, .footer-col li { font-size: 0.75rem; line-height: 1.35; }
+    .libro img { width: 45px; }
+    .redes a { font-size: 1.2rem; }
+    .footer-copy { margin-top: 8px; padding-top: 6px; font-size: 0.68rem; }
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 600px) {
+    html,
+    body {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    header {
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+    .menu {
+        height: auto;
+        min-height: 60px;
+        padding: 10px 12px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .menu__img-logo {
+        width: 120px;
+        height: 38px;
+    }
+
+    .menu__enlaces {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px 6px;
+    }
+
+    .menu__enlaces a {
+        padding: 0.3em 0.55em;
+        font-size: 0.8rem;
+    }
+
+    .mainbanner {
+        margin-top: 0;
+        padding: 45px 18px 35px;
+    }
+
+    .mainbanner__data {
+        max-width: 100%;
+        transform: none;
+        text-align: center;
+    }
+
+    .mainbanner__titulo {
+        font-size: 1.6rem;
+        line-height: 1.25;
+        margin-bottom: 14px;
+    }
+
+    .mainbanner__parrafo {
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+
+    .footer {
+        position: static !important;
+        max-height: none;
+        overflow: visible;
+        width: 100%;
+        padding: 26px 18px 20px;
+    }
+
+    .footer-contenedor {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 18px;
+    }
+
+    .footer-marca {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+
+    .libro img {
+        width: 60px;
+    }
+
+    .redes a {
+        font-size: 1.45rem;
+    }
+
+    .footer-col h3 {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+
+    .footer-col p,
+    .footer-col li {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .footer-copy {
+        margin-top: 16px;
+        padding-top: 12px;
+        font-size: 0.75rem;
+    }
+}
