@@ -72,3 +72,312 @@ img {
     }
 }
 
+/* FONDO DE LA PÁGINA */
+body {
+  background: #2e2e2e;
+}
+
+/* CONTENEDOR GENERAL DEL CATÁLOGO */
+.acc {
+  padding: 32px 48px 64px;
+}
+
+/* BARRA SUPERIOR: buscador + filtros */
+.acc__barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* CAJA DEL BUSCADOR */
+.acc__buscador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 340px;
+  height: 46px;
+  padding: 0 14px;
+  border: 2px solid #c0c6cc;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* CAMPO DE TEXTO DEL BUSCADOR */
+.acc__buscador input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font: inherit;
+}
+
+/* TEXTO GUÍA DEL BUSCADOR (placeholder) */
+.acc__buscador input::placeholder {
+  color: #c0c6cc;
+}
+
+/* CONTENEDOR DE LOS FILTROS */
+.acc__filtros {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* BOTONES DE FILTRO */
+.chip {
+  height: 38px;
+  padding: 0 18px;
+  border: 1px solid #c0c6cc;
+  border-radius: 999px;
+  background: #3a3a3a;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* BOTÓN DE FILTRO: al pasar el mouse */
+.chip:hover {
+  background: #4a4a4a;
+}
+
+/* BOTÓN DE FILTRO: seleccionado */
+.chip.activo {
+  background: #0066ff;
+  border-color: #0066ff;
+}
+
+/* CUADRÍCULA DE TARJETAS (3 columnas) */
+.acc__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* TARJETA DE ACCESORIO */
+.tarjeta {
+  background: #535353;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* TARJETA: al pasar el mouse */
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 22px rgba(0, 102, 255, 0.45);
+}
+
+/* IMAGEN O ÍCONO DE LA TARJETA */
+.tarjeta__img {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a 40%, #0a3a8a);
+  color: #c0c6cc;
+  font-size: 64px;
+}
+
+/* ZONA DE TEXTO DE LA TARJETA */
+.tarjeta__cuerpo {
+  padding: 18px 20px 22px;
+  color: #fff;
+}
+
+/* NOMBRE DEL ACCESORIO */
+.tarjeta__cuerpo h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+/* DESCRIPCIÓN DEL ACCESORIO */
+.tarjeta__cuerpo p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* FILA DEL PRECIO Y EL BOTÓN */
+.tarjeta__pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+/* PRECIO */
+.precio {
+  font-size: 16px;
+}
+
+/* BOTÓN COTIZAR */
+.btn-cotizar {
+  padding: 10px 28px;
+  border-radius: 6px;
+  background: #0066ff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* BOTÓN COTIZAR: al pasar el mouse */
+.btn-cotizar:hover {
+  background: #0a7bff;
+}
+
+/* TABLETS: tarjetas en 2 columnas */
+@media (max-width: 900px) {
+  .acc__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* CELULARES: tarjetas en 1 columna */
+@media (max-width: 600px) {
+  .acc {
+    padding: 24px 20px 48px;
+  }
+  .acc__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background: linear-gradient(120deg, #000 , #464646 , #0066ff);
+    color: #f8f8f8;
+    padding: 40px 30px 20px;
+    font-family: "Roboto Mono", monospace;
+}
+
+.footer-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.6fr 1.5fr 1fr 1fr;
+    gap: 30px;
+}
+
+/* Líneas divisorias entre columnas */
+.footer-col + .footer-col {
+    border-left: 2px solid #1a1a1a;
+    padding-left: 25px;
+}
+
+.footer-col h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.footer-col p,
+.footer-col li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.footer-col ul {
+    list-style: none;          /* quita las viñetas por defecto */
+}
+
+.footer-col a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: var(--color--cuartocuarto);
+}
+
+/* Columna del logo y redes */
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.libro img {
+    width: 80px;
+    height: auto;              /* anula el height: 90px global de img */
+    flex-basis: auto;
+    display: block;
+}
+
+.redes {
+    display: flex;
+    gap: 15px;
+}
+
+.redes a {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.redes a:hover {
+    color: var(--color--cuarto);
+    transform: translateY(-3px);
+}
+
+/* Copyright */
+.footer-copy {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #aaa;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* ---------- Tablet y celular ---------- */
+@media (max-width: 900px) {
+    .footer-contenedor {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-col + .footer-col {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-contenedor {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* ---------- Menú en celular ---------- */
+@media (max-width: 800px) {
+    .menu-nav {
+        flex-wrap: wrap;               /* permite que los enlaces bajen de línea */
+        justify-content: center;
+        gap: 10px 20px;
+        padding: 10px;
+    }
+
+    .logo {
+        flex-basis: 100%;              /* el logo ocupa su propia fila */
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        height: 70px;
+        width: auto;
+        flex-basis: auto;
+    }
+
+    nav a {
+        width: auto;                   /* quita el width: 100% en celular */
+        font-size: 0.85rem;
+    }
+}

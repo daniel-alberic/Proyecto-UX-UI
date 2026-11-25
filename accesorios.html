@@ -58,6 +58,7 @@
                     <button class="chip" data-cat="tecnologia">Tecnología</button>
                     <button class="chip" data-cat="seguridad">Seguridad</button>
                 </div>
+                </div>
 
                 <div class="acc__grid">
                     <article class="tarjeta" data-cat="exterior">
@@ -131,9 +132,83 @@
                         </div>
                       </div>
                     </article>
-                </div>
             </div>
          </div>
     </main>
+
+    <!-- FOOTER -->
+         <footer class="footer">
+    <div class="footer-contenedor">
+
+        <div class="footer-col footer-marca">
+            <a href="#" class="libro">
+                <img src="image/boock.png" alt="Libro de Reclamaciones">
+            </a>
+            <div class="redes">
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Kovara Automotriz</h3>
+            <p>
+                Kovara Automotriz motores es un importador y distribuidor de autos
+                ecológicos, sedán, hatchback, camionetas SUV, camiones y buses de
+                Hyundai en el Perú.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Estamos ubicados en</h3>
+            <p>Av. Panamericana Norte, Mega Plaza Independencia</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Post venta</h3>
+            <ul>
+                <li><a href="#">Servicio PostVenta</a></li>
+                <li><a href="#">Zona educativa</a></li>
+                <li><a href="#">Hyundai Seguros</a></li>
+                <li><a href="#">Hyundai Garantía</a></li>
+                <li><a href="#">Kit Control</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <p class="footer-copy">
+        © 2026 Kovara Automotriz, Perú., Inc. All information applies to U.S. vehicles only.
+    </p>
+</footer>
+
+     <!-- SCRIPT: buscador y filtros por categoría -->
+    <script>
+      const tarjetas = document.querySelectorAll(".tarjeta");
+      const chips = document.querySelectorAll(".chip");
+      const buscador = document.getElementById("buscador");
+      let categoria = "todos";
+
+      function filtrar() {
+        const texto = buscador.value.toLowerCase();
+        tarjetas.forEach((t) => {
+          const nombre = t.querySelector("h3").textContent.toLowerCase();
+          const okCat = categoria === "todos" || t.dataset.cat === categoria;
+          const okTexto = nombre.includes(texto);
+          t.style.display = okCat && okTexto ? "" : "none";
+        });
+      }
+
+      chips.forEach((c) => {
+        c.addEventListener("click", () => {
+          chips.forEach((x) => x.classList.remove("activo"));
+          c.classList.add("activo");
+          categoria = c.dataset.cat;
+          filtrar();
+        });
+      });
+
+      buscador.addEventListener("input", filtrar);
+    </script>
 </body>
 </html>
