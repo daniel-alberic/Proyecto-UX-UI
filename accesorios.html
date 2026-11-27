@@ -1,190 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- ICONO DE LA PESTAÑA -->
-    <link rel="shortcut icon" href="image/WhatsApp Image 2026-11-18 at 07.41.23.jpeg" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="shortcut icon"
+      href="image/WhatsApp Image 2026-11-18 at 07.41.23.jpeg"
+      type="image/x-icon"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- TIPOGRAFÍA -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/contactos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/contactos.css" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Kovara - Accesorios</title>
-    <link rel="stylesheet" href="CSS/accesorios.css">
+    <link rel="stylesheet" href="CSS/accesorios.css" />
     <!--jS para dispositivos moviles-->
     <script src="js/WE_MC_03_jquery.js"></script>
 
-<!-- ICONOS: Bootstrap Icons (lupa del buscador e íconos de las tarjetas) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head>
-<body>
+    <!-- ICONOS: Bootstrap Icons (lupa del buscador e íconos de las tarjetas) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <nav class="menu-nav">
+      <nav class="menu-nav">
         <a href="#" class="logo">
-            <img src="image/Logo.jpeg" alt="Logo Kovara Automotriz">
+          <img src="image/Logo.jpeg" alt="Logo Kovara Automotriz" />
         </a>
-            <a href="Inicio.html">Inicio</a> 
-            <a href="contactos.html">Contactos</a>
-            <a href="fran_marcas.html">Marcas</a>
-            <a href="1egg.html">Registro</a>
-            <a href="Nosotros.html">Nosotros</a>
-            <a href="accesorios.html">Accesorios</a>
-            <a href="sebas.html">Sedes</a>
-        </nav>
+        <a href="Inicio.html">Inicio</a>
+        <a href="contactos.html">Contactos</a>
+        <a href="fran_marcas.html">Marcas</a>
+        <a href="Adel.html">Registro</a>
+        <a href="Nosotros.html">Nosotros</a>
+        <a href="accesorios.html">Accesorios</a>
+        <a href="sebas.html">Sedes</a>
+      </nav>
     </header>
     <main>
-        <!-- Banner superior -->
-        <section class="hero-contacto">
-            <p class="p-uno">catálogo</p>
-            <h1>ACCESORIOS PARA<span> TU AUTO</span></h1>
-            <p class="p-dos">Personaliza y protege tu vehículo con productos de calidad</p>
-        </section>
+      <!-- Banner superior -->
+      <section class="hero-contacto">
+        <p class="p-uno">catalogo</p>
+        <h1>ACCESORIOS PARA<span> TU AUTO</span></h1>
+        <p class="p-dos">
+          Personaliza y protegé tu vehículo con productos de calidad
+        </p>
+      </section>
 
-        <!-- Banner principal -->
-         <div class="acc">
-            <div class="acc__barra">
-                <div class="acc__buscador">
-                    <i class="bi bi-search"></i>
-                    <input type="search" id="buscador" placeholder="Buscar accesorios...">
-                </div>
-                <div class="acc__filtros">
-                    <!-- FILTROS: el data-cat (data-categoria) de cada botón debe coincidir con el data-cat de las tarjetas -->
-                    <button class="chip activo" data-cat="todos">Todos</button>
-                    <button class="chip" data-cat="exterior">Exterior</button>
-                    <button class="chip" data-cat="interior">Interior</button>
-                    <button class="chip" data-cat="tecnologia">Tecnología</button>
-                    <button class="chip" data-cat="seguridad">Seguridad</button>
-                </div>
-                </div>
+      <!-- Banner principal -->
+      <div class="acc">
+        <div class="acc__barra">
+          <div class="acc__buscador">
+            <i class="bi bi-search"></i>
+            <input
+              type="search"
+              id="buscador"
+              placeholder="Buscador accesorios..."
+            />
+          </div>
+          <div class="acc__filtros">
+            <!-- FILTROS: el data-cat (data-categoria) de cada botón debe coincidir con el data-cat de las tarjetas -->
+            <button class="chip activo" data-cat="todos">Todos</button>
+            <button class="chip" data-cat="exterior">Exterior</button>
+            <button class="chip" data-cat="interior">Interior</button>
+            <button class="chip" data-cat="tecnologia">Tecnología</button>
+            <button class="chip" data-cat="seguridad">Seguridad</button>
+          </div>
+        </div>
 
-                <div class="acc__grid">
-                    <article class="tarjeta" data-cat="exterior">
-                        <div class="tarjeta__img"><i class="bi bi-disc"></i></div>
-                        <div class="tarjeta__cuerpo">
-                            <h3>Llantas deportivas</h3>
-                            <p>Compatible con las marcas de nuestro catálogo.</p>
-                            <div class="tarjeta__pie">
-                                <span class="precio">55.55 $</span>
-                                <a href="contactos.html" class="btn-cotizar">Cotizar</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="tarjeta" data-cat="tecnologia">
-                        <div class="tarjeta__img"><i class="bi bi-camera-video"></i></div>
-                        <div class="tarjeta__cuerpo">
-                            <h3>Cámara de retroceso</h3>
-                            <p>Compatible con las marcas de nuestro catálogo.</p>
-                            <div class="tarjeta__pie">
-                              <span class="precio">S/ 55.55</span>
-                              <a href="contactos.html" class="btn-cotizar">Cotizar</a>
-                            </div>
-                        </div>
-                     </article>
-
-                     <article class="tarjeta" data-cat="interior">
-                        <div class="tarjeta__img"><i class="bi bi-layers"></i></div>
-                          <div class="tarjeta__cuerpo">
-                            <h3>Fundas de asiento</h3>
-                            <p>Compatible con las marcas de nuestro catálogo.</p>
-                             <div class="tarjeta__pie">
-                               <span class="precio">S/ 55.55</span>
-                               <a href="contactos.html" class="btn-cotizar">Cotizar</a>
-                             </div>
-                          </div>
-                     </article>
-
-                    <article class="tarjeta" data-cat="interior">
-                      <div class="tarjeta__img"><i class="bi bi-files"></i></div>
-                      <div class="tarjeta__cuerpo">
-                        <h3>Alfombras para auto</h3>
-                        <p>Compatible con las marcas de nuestro catálogo.</p>
-                        <div class="tarjeta__pie">
-                          <span class="precio">S/ 55.55</span>
-                          <a href="contactos.html" class="btn-cotizar">Cotizar</a>
-                        </div>
-                      </div>
-                    </article>
-
-                    <article class="tarjeta" data-cat="exterior">
-                      <div class="tarjeta__img"><i class="bi bi-bar-chart-fill"></i></div>
-                      <div class="tarjeta__cuerpo">
-                        <h3>Barras de techo</h3>
-                        <p>Compatible con las marcas de nuestro catálogo.</p>
-                        <div class="tarjeta__pie">
-                          <span class="precio">S/ 55.55</span>
-                          <a href="contactos.html" class="btn-cotizar">Cotizar</a>
-                        </div>
-                      </div>
-                    </article>
-
-                    <article class="tarjeta" data-cat="seguridad">
-                      <div class="tarjeta__img"><i class="bi bi-lightbulb"></i></div>
-                      <div class="tarjeta__cuerpo">
-                        <h3>Kit de luces LED</h3>
-                        <p>Compatible con las marcas de nuestro catálogo.</p>
-                        <div class="tarjeta__pie">
-                          <span class="precio">S/ 55.55</span>
-                          <a href="contactos.html" class="btn-cotizar">Cotizar</a>
-                        </div>
-                      </div>
-                    </article>
+        <div class="acc__grid">
+          <article class="tarjeta" data-cat="exterior">
+            <div class="tarjeta__img"><i class="bi bi-disc"></i></div>
+            <div class="tarjeta__cuerpo">
+              <h3>Llantas deportivas</h3>
+              <p>Compatible con las marcas de nuestro catálogo.</p>
+              <div class="tarjeta__pie">
+                <span class="precio">55.55 $</span>
+                <a href="contactos.html" class="btn-cotizar">Cotizar</a>
+              </div>
             </div>
-         </div>
+          </article>
+
+          <article class="tarjeta" data-cat="tecnologia">
+            <div class="tarjeta__img"><i class="bi bi-camera-video"></i></div>
+            <div class="tarjeta__cuerpo">
+              <h3>Cámara de retroceso</h3>
+              <p>Compatible con las marcas de nuestro catálogo.</p>
+              <div class="tarjeta__pie">
+                <span class="precio">55.55 $</span>
+                <a href="contactos.html" class="btn-cotizar">Cotizar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-cat="interior">
+            <div class="tarjeta__img"><i class="bi bi-layers"></i></div>
+            <div class="tarjeta__cuerpo">
+              <h3>Fundas de asiento</h3>
+              <p>Compatible con las marcas de nuestro catálogo.</p>
+              <div class="tarjeta__pie">
+                <span class="precio">55.55 $</span>
+                <a href="contactos.html" class="btn-cotizar">Cotizar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-cat="interior">
+            <div class="tarjeta__img"><i class="bi bi-files"></i></div>
+            <div class="tarjeta__cuerpo">
+              <h3>Alfombras para auto</h3>
+              <p>Compatible con las marcas de nuestro catálogo.</p>
+              <div class="tarjeta__pie">
+                <span class="precio">55.55 $</span>
+                <a href="contactos.html" class="btn-cotizar">Cotizar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-cat="exterior">
+            <div class="tarjeta__img"><i class="bi bi-bar-chart-fill"></i></div>
+            <div class="tarjeta__cuerpo">
+              <h3>Barras de techo</h3>
+              <p>Compatible con las marcas de nuestro catálogo.</p>
+              <div class="tarjeta__pie">
+                <span class="precio">55.55 $</span>
+                <a href="contactos.html" class="btn-cotizar">Cotizar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="tarjeta" data-cat="seguridad">
+            <div class="tarjeta__img"><i class="bi bi-lightbulb"></i></div>
+            <div class="tarjeta__cuerpo">
+              <h3>Kit de luces LED</h3>
+              <p>Compatible con las marcas de nuestro catálogo.</p>
+              <div class="tarjeta__pie">
+                <span class="precio">55.55 $</span>
+                <a href="contactos.html" class="btn-cotizar">Cotizar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER -->
-         <footer class="footer">
-    <div class="footer-contenedor">
-
+    <footer class="footer">
+      <div class="footer-contenedor">
         <div class="footer-col footer-marca">
-            <a href="#" class="libro">
-                <img src="image/boock.png" alt="Libro de Reclamaciones">
-            </a>
-            <div class="redes">
-                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-            </div>
+          <a href="#" class="libro">
+            <img src="image/boock.png" alt="Libro de Reclamaciones" />
+          </a>
+          <div class="redes">
+            <a href="#" aria-label="Instagram"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
         </div>
 
         <div class="footer-col">
-            <h3>Kovara Automotriz</h3>
-            <p>
-                Kovara Automotriz motores es un importador y distribuidor de autos
-                ecológicos, sedán, hatchback, camionetas SUV, camiones y buses de
-                Hyundai en el Perú.
-            </p>
+          <h3>Kovara Automotriz</h3>
+          <p>
+            Kovara Automotriz motores es un importador y distribuidor de autos
+            ecológicos, sedán, hatchback, camionetas SUV, camiones y buses de
+            Hyundai en el Perú.
+          </p>
         </div>
 
         <div class="footer-col">
-            <h3>Estamos ubicados en</h3>
-            <p>Av. Panamericana Norte, Mega Plaza Independencia</p>
+          <h3>Estamos ubicados en</h3>
+          <p>Av. Panamericana Norte, Mega Plaza Independencia</p>
         </div>
 
         <div class="footer-col">
-            <h3>Posventa</h3>
-            <ul>
-                    <li><a href="#">Servicio posventa</a></li>
-                    <li><a href="#">Zona educativa</a></li>
-                    <li><a href="#">Seguros Hyundai</a></li>
-                    <li><a href="#">Garantía Hyundai</a></li>
-                    <li><a href="#">Kit Control</a></li>
-            </ul>
+          <h3>Posventa</h3>
+          <ul>
+            <li><a href="#">Servicio posventa</a></li>
+            <li><a href="#">Zona educativa</a></li>
+            <li><a href="#">Seguros Hyundai</a></li>
+            <li><a href="#">Garantía Hyundai</a></li>
+            <li><a href="#">Kit Control</a></li>
+          </ul>
         </div>
+      </div>
 
-    </div>
+      <p class="footer-copy">
+        © 2026 Kovara Automotriz, Perú., Inc. All information applies to U.S.
+        vehicles only.
+      </p>
+    </footer>
 
-    <p class="footer-copy">
-        © 2026 Kovara Automotriz, Perú., Inc. All information applies to U.S. vehicles only.
-    </p>
-</footer>
-
-     <!-- SCRIPT: buscador y filtros por categoría -->
+    <!-- SCRIPT: buscador y filtros por categoría -->
     <script>
       const tarjetas = document.querySelectorAll(".tarjeta");
       const chips = document.querySelectorAll(".chip");
@@ -212,7 +229,5 @@
 
       buscador.addEventListener("input", filtrar);
     </script>
-</body>
+  </body>
 </html>
-
-<!-- lorax -->
