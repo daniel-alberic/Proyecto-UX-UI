@@ -19,18 +19,17 @@ body {
     min-height: 100vh;
     width: 100%;
     overflow-x: hidden;
-}
-
-/* MENÚ DE NAVEGACIÓN */
-header {
-    background: #000;
-}
-
-nav a {
-    color: #ffff;
-    text-decoration: none;
     font-family: "Roboto Mono", monospace;
-    width: 100%;
+}
+
+img {
+    display: block;
+    flex-basis: 200px;
+    height: 90px;
+}
+
+header {
+    background: #000000;
 }
 
 .menu-nav {
@@ -42,10 +41,11 @@ nav a {
     position: relative;
 }
 
-img {
-    display: block;
-    flex-basis: 200px;
-    height: 90px;
+.menu-nav a,
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    width: 100%;
 }
 
 .menu {
@@ -70,7 +70,6 @@ img {
 .menu__img-logo {
     height: 75px;
     width: auto;
-    display: block;
     object-fit: contain;
 }
 
@@ -93,14 +92,12 @@ img {
     color: var(--color--cuarto);
 }
 
-/* SECCIÓN DE MARCAS */
 .container {
     background-color: #000000;
     padding: 30px 0 50px;
 }
 
 .titulo-marcas {
-    font-family: "Roboto Mono", monospace;
     font-weight: 700;
     font-size: 2rem;
     text-align: center;
@@ -156,7 +153,6 @@ img {
 }
 
 .card__img img {
-    display: block;
     width: 100%;
     height: 100%;
     max-width: 100%;
@@ -177,7 +173,6 @@ img {
 }
 
 .card__title {
-    font-family: "Roboto Mono", monospace;
     font-weight: 700;
     font-size: 1em;
     text-align: center;
@@ -185,36 +180,66 @@ img {
     text-transform: uppercase;
 }
 
-.card__content .card__info,
+.card__details {
+    position: relative;
+    width: 100%;
+    margin-top: 1.5em;
+}
+
+.card__details summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.card__details summary::-webkit-details-marker {
+    display: none;
+}
+
 .card__info {
     font-size: 1em;
     padding: 1em;
-    margin-top: 1.5em;
     display: block;
+    width: 100%;
     border-radius: 1.5em;
     text-align: center;
     font-weight: 600;
     text-decoration: none;
-    font-family: "Roboto Mono", monospace;
     transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
     background-color: #ffffff;
-    border: 1px solid #0066ff;
-    color: #0066ff;
+    border: 1px solid var(--color--cuarto);
+    color: var(--color--cuarto);
 }
 
-.card__content .card__info:hover,
-.card__info:hover {
-    background-color: #0066ff;
+.card__info:hover,
+.card__details[open] .card__info {
+    background-color: var(--color--cuarto);
     color: #ffffff;
 }
 
-/* ---------- FOOTER ---------- */
+.ventana-info {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    max-width: 85vw;
+    background-color: var(--color--primario);
+    color: #ffffff;
+    border: 1px solid var(--color--cuarto);
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+    z-index: 20;
+}
+
 .footer {
     width: 100%;
-    background: linear-gradient(120deg, #000, #464646, #0066ff);
+    background: linear-gradient(120deg, #000000, #464646, var(--color--cuarto));
     color: #f8f8f8;
     padding: 40px 30px 20px;
-    font-family: "Roboto Mono", monospace;
 }
 
 .footer-contenedor {
@@ -225,8 +250,8 @@ img {
     gap: 30px;
 }
 
-.footer-col+.footer-col {
-    border-left: 2px solid #1a1a1a;
+.footer-col + .footer-col {
+    border-left: 2px solid var(--color--primario);
     padding-left: 25px;
 }
 
@@ -266,7 +291,6 @@ img {
 .libro img {
     width: 80px;
     height: auto;
-    display: block;
 }
 
 .redes {
@@ -275,7 +299,7 @@ img {
 }
 
 .redes a {
-    color: #1a1a1a;
+    color: var(--color--primario);
     font-size: 1.8rem;
     transition: color 0.2s, transform 0.2s;
 }
@@ -289,26 +313,12 @@ img {
     max-width: 1100px;
     margin: 30px auto 0;
     padding-top: 15px;
-    border-top: 1px solid #aaa;
+    border-top: 1px solid #aaaaaa;
     text-align: center;
     font-size: 0.8rem;
 }
 
-/* ---------- Tablet y celular ---------- */
 @media (max-width: 900px) {
-    .footer-contenedor {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-col+.footer-col {
-        border-left: none;
-        padding-left: 0;
-    }
-
-    .menu__btn-menu {
-        display: inline-block;
-    }
-
     .menu {
         flex-direction: column;
         align-items: flex-start;
@@ -318,6 +328,10 @@ img {
     .menu__logo {
         width: 100%;
         justify-content: space-between;
+    }
+
+    .menu__btn-menu {
+        display: inline-block;
     }
 
     .menu__enlaces {
@@ -332,15 +346,67 @@ img {
     .menu__enlaces.activo {
         display: flex;
     }
+
+    .footer-contenedor {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-col + .footer-col {
+        border-left: none;
+        padding-left: 0;
+    }
 }
 
 @media (max-width: 600px) {
+    .menu-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 12px 15px;
+    }
+
+    .menu-nav a {
+        width: auto;
+        font-size: 0.85rem;
+    }
+
+    .menu-nav .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .titulo-marcas {
+        font-size: 1.4rem;
+        margin-bottom: 24px;
+    }
+
     .cards__grid {
         grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 0 15px;
+    }
+
+    .card__img {
+        height: 160px;
+    }
+
+    .ventana-info {
+        width: 220px;
+        font-size: 0.75rem;
+    }
+
+    .footer {
+        padding: 30px 18px 20px;
     }
 
     .footer-contenedor {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 22px;
+    }
+
+    .redes {
+        justify-content: center;
     }
 }
